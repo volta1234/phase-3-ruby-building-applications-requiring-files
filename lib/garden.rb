@@ -1,6 +1,8 @@
 # Something is missing here
+require_relative './plant'
 
 class Garden
+  extend Plant
   attr_accessor :name
 
   def initialize(name:)
@@ -16,10 +18,10 @@ end
 
 lawn = Garden.new(name: 'Front Lawn')
 
-basil = Plant.new(name: 'Basil')
-basil.garden = lawn
+# basil = Plant.new(name: 'Basil')
+# basil.garden = lawn
 
-cucumber = Plant.new(name: 'Cucumber')
-cucumber.garden = lawn
+# cucumber = Plant.new(name: 'Cucumber')
+# cucumber.garden = lawn
 
 p lawn.plants
